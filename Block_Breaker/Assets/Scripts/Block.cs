@@ -6,14 +6,23 @@ public class Block : MonoBehaviour
     [SerializeField] GameObject blockSparklesVFX;
     Level level;
 
+    private readonly string breakableText = "Breakable";
+
     private void Start()
     {
         level = FindObjectOfType<Level>();
-        level.AddBreakableBlock();
+
+        if (tag == breakableText)
+        {
+            level.CountBlocks();
+        }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        DestroyBlock();
+        if (tag == breakableText)
+        {
+            DestroyBlock();
+        }
     }
 
     private void DestroyBlock()
