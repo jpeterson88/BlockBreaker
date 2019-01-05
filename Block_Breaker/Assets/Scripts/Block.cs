@@ -34,6 +34,7 @@ public class Block : MonoBehaviour
         timesHit++;
         PlayBlockDestroySFX();
         int maxHits = hitSprites.Length + 1;
+
         if (timesHit >= maxHits)
         {
             DestroyBlock();
