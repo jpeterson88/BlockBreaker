@@ -1,12 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
     [SerializeField] Paddle paddle1;
     [SerializeField] float xPush = 2f;
     [SerializeField] float yPush = 15f;
+    [SerializeField] float randomFactor = 0.2f;
 
     private Vector2 paddleToBallVector;
     private Rigidbody2D myRigidBody2D;
@@ -49,9 +48,14 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Vector2 velocityTeak = new Vector2(
+            Random.Range(0, randomFactor),
+            Random.Range(0, randomFactor));
+
         if (collision.gameObject.name.StartsWith("Block"))
         {
             audioSource.Play();
+            myRigidBody2D.velocity += velocityTeak;
         }
     }
 }

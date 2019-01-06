@@ -188,6 +188,7 @@ MonoBehaviour:
   paddle1: {fileID: 0}
   xPush: 2
   yPush: 15
+  randomFactor: 0.5
 --- !u!212 &212694057638573076
 SpriteRenderer:
   m_ObjectHideFlags: 1
