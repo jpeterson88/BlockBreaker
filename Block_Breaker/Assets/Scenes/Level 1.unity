@@ -285,6 +285,16 @@ Prefab:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114699135975461836, guid: b681c6dfb13f54ac59b54adb7965e26a,
+        type: 2}
+      propertyPath: isAutoPlayEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114699135975461836, guid: b681c6dfb13f54ac59b54adb7965e26a,
+        type: 2}
+      propertyPath: gameSpeed
+      value: 2.96
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b681c6dfb13f54ac59b54adb7965e26a, type: 2}
   m_IsPrefabAsset: 0
