@@ -77,4 +77,5 @@ public class Block : MonoBehaviour
         AudioSource.PlayClipAtPoint(breakSound, Camera.main.transform.position);
         FindObjectOfType<GameSession>().AddToScore();
     }
+
 }
